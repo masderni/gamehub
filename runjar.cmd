@@ -1,0 +1,1 @@
+java -cp target\gamehub-1.0-SNAPSHOT.jar is.hi.hbv202g.project.App
