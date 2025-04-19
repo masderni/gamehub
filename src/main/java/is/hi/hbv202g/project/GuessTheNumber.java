@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class GuessTheNumber {
 
-    private static int guess;
-    public static void guessTheNumber(Scanner scanner) {
+    private int guess;
+    public void guessTheNumber(Scanner scanner) {
         Random rand = new Random();
         int numberToGuess = rand.nextInt(100) + 1;
         //int guess;
@@ -30,7 +30,7 @@ public class GuessTheNumber {
         playAgain(scanner);
     }
 
-    private static void playAgain(Scanner scanner) {
+    private void playAgain(Scanner scanner) {
         System.out.println("Would you like to play again? (y/n)");
         String playAgain = scanner.nextLine();
         if (playAgain.equals("y")) {
@@ -42,6 +42,11 @@ public class GuessTheNumber {
     }
 
     public int getGuess() {
+        return guess;
+    }
+
+    public int setGuess(int guess) {
+        this.guess = guess;
         return guess;
     }
 

@@ -7,5 +7,6 @@ The implementation as well as the tests are in the Java package is.hi.hbv202g.pr
 The implementation can be found under src/main/java/is/hbv202g/project, where GameHub contains the game hub which starts the interface and lets the user choose and play the games. 
 Each game is separately implemented under its name. 
 The tests can be found under src/test/java/is/hbv202g/project. 
+To play the gamehub simply run the createjar.cmd and then runjar.cmd
 
 This project was written by Andri Már Sigurðsson and Julia Ming Brunner. 

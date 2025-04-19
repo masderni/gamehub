@@ -45,7 +45,8 @@ public class GameHub {
 
     public static void playGuessTheNumber(Scanner scanner) {
         System.out.println("Starting Guess the Number...");
-        GuessTheNumber.guessTheNumber(scanner);
+        GuessTheNumber guessTheNumber = new GuessTheNumber();
+        guessTheNumber.guessTheNumber(scanner);
         playAgain(scanner);
 
         //System.out.println("This is a placeholder. Guess the Number is under development.");
