@@ -30,7 +30,7 @@ public class GameHub {
                 System.out.println("Invalid choice. Please restart and choose a valid game.");
         }
 
-        scanner.close();
+        //scanner.close();
 
             // ------------------ Game Implementations ------------------
     }
@@ -38,17 +38,35 @@ public class GameHub {
         System.out.println("Starting Tic-Tac-Toe...");
         TicTacToe ticTacToe = new TicTacToe();
         ticTacToe.play();
+        playAgain(scanner);
+
         //System.out.println("This is a placeholder. Tic-Tac-Toe is under development.");
     }
 
     public static void playGuessTheNumber(Scanner scanner) {
         System.out.println("Starting Guess the Number...");
-        System.out.println("This is a placeholder. Guess the Number is under development.");
+        GuessTheNumber.guessTheNumber(scanner);
+        playAgain(scanner);
+
+        //System.out.println("This is a placeholder. Guess the Number is under development.");
     }
 
     public static void playRockPaperScissors(Scanner scanner) {
         System.out.println("Starting Rock-Paper-Scissors...");
-        System.out.println("This is a placeholder. Rock-Paper-Scissors is under development.");
+        RockPaperScissors.rockPaperScissors(scanner);
+        playAgain(scanner);
+        
+        //System.out.println("This is a placeholder. Rock-Paper-Scissors is under development.");
+    }
+
+    public static void playAgain(Scanner scanner) {
+        System.out.println("Would you like to play another game? (y/n)");
+        String playAgain = scanner.nextLine();
+        if (playAgain.equals("y")) {
+            main(null);
+        } else {
+            System.exit(0);
+        }
     }
 }
 

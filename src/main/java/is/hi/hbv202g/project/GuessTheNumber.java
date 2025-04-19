@@ -1,8 +1,12 @@
 package is.hi.hbv202g.project;
 
 import java.util.Scanner;
+import java.util.Random;
 
-public static void GuessTheNumber(Scanner scanner) {
+public class GuessTheNumber {
+
+    
+    public static void guessTheNumber(Scanner scanner) {
         System.out.println("Starting Guess the Number...");
         Random rand = new Random();
         int numberToGuess = rand.nextInt(100) + 1;
@@ -23,3 +27,4 @@ public static void GuessTheNumber(Scanner scanner) {
             }
         } while (guess != numberToGuess);
     }
+}

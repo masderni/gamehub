@@ -1,8 +1,12 @@
 package is.hi.hbv202g.project;
 
 import java.util.Scanner;
+import java.util.Random;
 
-public static void RockPaperScissors(Scanner scanner) {
+public class RockPaperScissors {
+    
+
+public static void rockPaperScissors(Scanner scanner) {
         System.out.println("Starting Rock-Paper-Scissors...");
         String[] rps = {"rock", "paper", "scissors"};
         Random rand = new Random();
@@ -25,3 +29,4 @@ public static void RockPaperScissors(Scanner scanner) {
             System.out.println("Invalid move. Please restart and try again.");
         }
     }
+}
