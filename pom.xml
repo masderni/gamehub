@@ -79,8 +79,8 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.1</version>
         <configuration>
-          <mainClass>is.hi.hbv202g.project.App</mainClass>
-           <!-- FIXME change mainClass later -->
+          <mainClass>is.hi.hbv202g.project.GameHub</mainClass>
+           <!-- FIXME change mainClass later gamehub likley main class so no need to fix anymore-->
         </configuration>
       </plugin>
     </plugins>
