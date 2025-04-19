@@ -1,5 +1,7 @@
 package is.hi.hbv202g.project;
 
+import java.util.Scanner;
+
 public static void GuessTheNumber(Scanner scanner) {
         System.out.println("Starting Guess the Number...");
         Random rand = new Random();

@@ -1,5 +1,7 @@
 package is.hi.hbv202g.project;
 
+import java.util.Scanner;
+
 public static void RockPaperScissors(Scanner scanner) {
         System.out.println("Starting Rock-Paper-Scissors...");
         String[] rps = {"rock", "paper", "scissors"};
