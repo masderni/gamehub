@@ -105,6 +105,9 @@ public class TicTacToe {
         //Scanner scanner = new Scanner(System.in);
         String playAgain = scanner.nextLine();
         if(playAgain.equals("y")) play();
-        else System.exit(0);
+        else if(!playAgain.equals("n")) {
+            System.out.println("Invalid input. Please try again.");
+            playAgain();
+        }
     }
 }   

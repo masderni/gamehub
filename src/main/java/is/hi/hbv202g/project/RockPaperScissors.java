@@ -6,8 +6,7 @@ import java.util.Random;
 public class RockPaperScissors {
     
 
-public static void rockPaperScissors(Scanner scanner) {
-        System.out.println("Starting Rock-Paper-Scissors...");
+    public static void rockPaperScissors(Scanner scanner) {
         String[] rps = {"rock", "paper", "scissors"};
         Random rand = new Random();
 
@@ -27,6 +26,20 @@ public static void rockPaperScissors(Scanner scanner) {
             System.out.println("You lose!");
         } else {
             System.out.println("Invalid move. Please restart and try again.");
+            rockPaperScissors(scanner);
+        }
+        playAgain(scanner);
+
+    }
+    private static void playAgain(Scanner scanner) {
+        System.out.println("Would you like to play again? (y/n)");
+        String playAgain = scanner.nextLine();
+        if (playAgain.equals("y")) {
+            rockPaperScissors(scanner);
+        }
+        else if(!playAgain.equals("n")) {
+            System.out.println("Invalid input. Please try again.");
+            playAgain(scanner);
         }
     }
 }

@@ -7,7 +7,6 @@ public class GuessTheNumber {
 
     
     public static void guessTheNumber(Scanner scanner) {
-        System.out.println("Starting Guess the Number...");
         Random rand = new Random();
         int numberToGuess = rand.nextInt(100) + 1;
         int guess;
@@ -26,5 +25,17 @@ public class GuessTheNumber {
                 System.out.println("Correct! You guessed it in " + attempts + " attempts.");
             }
         } while (guess != numberToGuess);
+        playAgain(scanner);
+    }
+
+    private static void playAgain(Scanner scanner) {
+        System.out.println("Would you like to play again? (y/n)");
+        String playAgain = scanner.nextLine();
+        if (playAgain.equals("y")) {
+            guessTheNumber(scanner);
+        } else if (!playAgain.equals("n")) {
+            System.out.println("Invalid input. Please try again.");
+            playAgain(scanner);
+        }
     }
 }
