@@ -1,7 +1,7 @@
 package is.hi.hbv202g.project;
 
 import java.util.Scanner;
-import java.util.Random;
+
 
 public class GameHub {
 

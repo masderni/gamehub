@@ -42,7 +42,7 @@ public class TicTacToe {
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){
                 System.out.print(board[i][j] + " ");
-                if(board[i][j] == '\0') System.out.print(" ");//prrint a space to make the board look nice
+                if(board[i][j] == '\0') System.out.print(" ");//print a space to make the board look nice
             }
             System.out.println();
         }
