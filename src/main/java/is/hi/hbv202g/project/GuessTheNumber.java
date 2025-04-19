@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class GuessTheNumber {
 
-    
+    private static int guess;
     public static void guessTheNumber(Scanner scanner) {
         Random rand = new Random();
         int numberToGuess = rand.nextInt(100) + 1;
-        int guess;
+        //int guess;
         int attempts = 0;
 
         System.out.println("Guess a number between 1 and 100:");
@@ -17,10 +17,12 @@ public class GuessTheNumber {
         do {
             guess = scanner.nextInt();
             attempts++;
-            if (guess < numberToGuess) {
-                System.out.println("Too low. Try again:");
+            if (guess > 100 || guess < 1) {
+                System.out.println("You just wasted a guess. Try again:");
             } else if (guess > numberToGuess) {
                 System.out.println("Too high. Try again:");
+            } else if (guess < numberToGuess) {
+                System.out.println("Too low. Try again:");
             } else {
                 System.out.println("Correct! You guessed it in " + attempts + " attempts.");
             }
@@ -38,4 +40,9 @@ public class GuessTheNumber {
             playAgain(scanner);
         }
     }
+
+    public int getGuess() {
+        return guess;
+    }
+
 }
