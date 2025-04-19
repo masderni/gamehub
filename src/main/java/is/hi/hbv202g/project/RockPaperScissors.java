@@ -4,14 +4,15 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class RockPaperScissors {
-    
+    Scanner scanner = new Scanner(System.in);
+    private String userMove;
 
-    public static void rockPaperScissors(Scanner scanner) {
+    public void rockPaperScissors() {
         String[] rps = {"rock", "paper", "scissors"};
         Random rand = new Random();
 
         System.out.print("Enter rock, paper, or scissors: ");
-        String userMove = scanner.nextLine().toLowerCase();
+        userMove = scanner.nextLine().toLowerCase();
         String computerMove = rps[rand.nextInt(3)];
 
         System.out.println("Computer chose: " + computerMove);
@@ -26,20 +27,28 @@ public class RockPaperScissors {
             System.out.println("You lose!");
         } else {
             System.out.println("Invalid move. Please restart and try again.");
-            rockPaperScissors(scanner);
+            rockPaperScissors();
         }
-        playAgain(scanner);
+        playAgain();
 
     }
-    private static void playAgain(Scanner scanner) {
+    private void playAgain() {
         System.out.println("Would you like to play again? (y/n)");
         String playAgain = scanner.nextLine();
         if (playAgain.equals("y")) {
-            rockPaperScissors(scanner);
+            rockPaperScissors();
         }
         else if(!playAgain.equals("n")) {
             System.out.println("Invalid input. Please try again.");
-            playAgain(scanner);
+            playAgain();
         }
+    }
+
+    public void setUserMoveString(String newuserMove) {
+        userMove = newuserMove;
+    }
+
+    public String getUserMoveString() {
+        return userMove;
     }
 }

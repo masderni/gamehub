@@ -46,7 +46,7 @@ public class GameHub {
     public static void playGuessTheNumber(Scanner scanner) {
         System.out.println("Starting Guess the Number...");
         GuessTheNumber guessTheNumber = new GuessTheNumber();
-        guessTheNumber.guessTheNumber(scanner);
+        guessTheNumber.guessTheNumber();
         playAgain(scanner);
 
         //System.out.println("This is a placeholder. Guess the Number is under development.");
@@ -54,7 +54,8 @@ public class GameHub {
 
     public static void playRockPaperScissors(Scanner scanner) {
         System.out.println("Starting Rock-Paper-Scissors...");
-        RockPaperScissors.rockPaperScissors(scanner);
+        RockPaperScissors rockPaperScissors = new RockPaperScissors();
+        rockPaperScissors.rockPaperScissors();
         playAgain(scanner);
         
         //System.out.println("This is a placeholder. Rock-Paper-Scissors is under development.");

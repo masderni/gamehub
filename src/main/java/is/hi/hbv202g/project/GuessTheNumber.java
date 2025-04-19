@@ -4,9 +4,9 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class GuessTheNumber {
-
+    Scanner scanner = new Scanner(System.in);
     private int guess;
-    public void guessTheNumber(Scanner scanner) {
+    public void guessTheNumber() {
         Random rand = new Random();
         int numberToGuess = rand.nextInt(100) + 1;
         //int guess;
@@ -27,17 +27,17 @@ public class GuessTheNumber {
                 System.out.println("Correct! You guessed it in " + attempts + " attempts.");
             }
         } while (guess != numberToGuess);
-        playAgain(scanner);
+        playAgain();
     }
 
-    private void playAgain(Scanner scanner) {
+    private void playAgain() {
         System.out.println("Would you like to play again? (y/n)");
         String playAgain = scanner.nextLine();
         if (playAgain.equals("y")) {
-            guessTheNumber(scanner);
+            guessTheNumber();
         } else if (!playAgain.equals("n")) {
             System.out.println("Invalid input. Please try again.");
-            playAgain(scanner);
+            playAgain();
         }
     }
 
